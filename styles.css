@@ -1,0 +1,178 @@
+/* Root Variables for Colors */
+:root {
+    --primary: #7f5af0;
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --card: #1a1a1a;
+    --accent: #2a2a2a;
+}
+
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.8; /* Increased line height */
+    font-size: 1.1rem; /* Slightly larger font size */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card);
+    padding: 1.2rem 2.5rem; /* Increased padding */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    font-size: 1.8rem; /* Larger font size */
+    font-weight: bold;
+    color: var(--primary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem; /* Increased gap */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.6rem 1.2rem; /* Increased padding */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--primary);
+    color: var(--bg);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2.5rem; /* Increased padding */
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Larger font size */
+    color: var(--primary);
+    margin-bottom: 1.2rem; /* Increased margin */
+}
+
+.hero p {
+    font-size: 1.4rem; /* Larger font size */
+    margin-bottom: 2.5rem; /* Increased margin */
+}
+
+.hero .socials a {
+    color: var(--text);
+    margin: 0 1.2rem; /* Increased margin */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.hero .socials a:hover {
+    color: var(--primary);
+}
+
+/* Content Containers */
+.content-container {
+    max-width: 900px; /* Increased max width */
+    margin: 2.5rem auto; /* Increased margin */
+    padding: 2.5rem; /* Increased padding */
+    background-color: var(--card);
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+.content-container h2 {
+    font-size: 2.5rem; /* Larger font size */
+    margin-bottom: 1.2rem; /* Increased margin */
+    color: var(--primary);
+    text-align: center;
+}
+
+.content-container p {
+    margin-bottom: 1.2rem; /* Increased margin */
+    text-align: center;
+    font-size: 1.2rem; /* Larger font size */
+}
+
+.content-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+content-container ul li {
+    margin: 0.6rem 0; /* Increased margin */
+}
+
+.content-container ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.1rem; /* Larger font size */
+    transition: color 0.3s;
+}
+
+.content-container ul li a:hover {
+    color: var(--text);
+}
+
+/* Social Links Page */
+main {
+    max-width: 800px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* Center vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Adjust for nav height */
+}
+main h1 {
+    text-align: center;
+}
+main h1 {
+    font-size: 2.5rem; /* Larger font size */
+    color: var(--primary);
+    margin-bottom: 1.2rem; /* Increased margin */
+}
+
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+main ul li {
+    margin: 0.6rem 0; /* Increased margin */
+}
+
+main ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem; /* Larger font size */
+    transition: color 0.3s;
+}
+
+main ul li a:hover {
+    color: var(--text);
+}
