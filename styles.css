@@ -242,3 +242,25 @@ a:hover {
         width: 100%;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  flex: 1;
+}
+/* Footer */
+footer {
+    background-color: var(--card);
+    color: var(--text);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
+}
