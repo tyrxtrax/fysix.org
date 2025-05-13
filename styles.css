@@ -42,7 +42,7 @@ body::before {
 a:hover,
 button:hover,
 nav ul li a:hover {
-    cursor: url('selectCursor.png') 16 16, auto;
+    cursor: url('SelectCursor.png') 16 16, auto;
 }
 
 /* Navigation Bar */
