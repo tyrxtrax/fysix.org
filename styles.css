@@ -195,30 +195,69 @@ main ul li a:hover {
   color: #90cdf4;
 }
 
-.social-links {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
+/* Base Body Styling */
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: system-ui, sans-serif;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  cursor: url('NormalCursor.png') 16 16, auto;
 }
 
-.social-links a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
+/* Hover Cursor */
+a:hover,
+button:hover,
+nav ul li a:hover {
+  cursor: url('selectCursor.png') 16 16, auto;
+}
+
+/* Navbar */
+nav {
+  background-color: #1f1f1f;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #bb86fc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
   background-color: transparent;
   border: 2px solid #bb86fc;
-  border-radius: 6px;
   color: #bb86fc;
-  text-decoration: none;
+  font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.social-links a:hover {
+nav ul li a:hover {
   background-color: #bb86fc;
   color: #121212;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
+
+/* Optional Layout Toggle Button (as nav item) */
+nav ul li.layout-toggle {
+  margin-left: auto;
+}
+
 
 /* Base Dark Mode */
 body {
@@ -291,44 +330,4 @@ button {
 
 button:hover {
   background-color: #bb86fc;
-}
-
-
-/* GitHub and Discord Buttons Styling */
-.social-links a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: transparent;
-  border: 2px solid #90cdf4; /* Border color */
-  border-radius: 6px;
-  color: #90cdf4; /* Text color */
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.social-links a:hover {
-  background-color: #90cdf4;
-  color: #121212;
-}
-
-.social-links a.github {
-  border-color: #333;
-  color: #333;
-}
-
-.social-links a.github:hover {
-  background-color: #333;
-  color: #f0f0f0;
-}
-
-.social-links a.discord {
-  border-color: #7289da; /* Discord blue */
-  color: #7289da;
-}
-
-.social-links a.discord:hover {
-  background-color: #7289da;
-  color: #f0f0f0;
 }
