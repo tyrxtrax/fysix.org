@@ -7,28 +7,39 @@
     --accent: #2a2a2a;
 }
 
-/* General Body Styling */
+/* Base Styling */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #121212;
     color: var(--text);
-    line-height: 1.8; /* Increased line height */
-    font-size: 1.1rem; /* Slightly larger font size */
+    line-height: 1.8;
+    font-size: 1.1rem;
+    cursor: url('NormalCursor.png') 16 16, auto;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Navigation Bar */
+/* Cursor on Hover */
+a:hover,
+button:hover,
+nav ul li a:hover {
+    cursor: url('selectCursor.png') 16 16, auto;
+}
+
+/* Navbar */
 nav {
+    background-color: var(--card);
+    padding: 1.2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--card);
-    padding: 1.2rem 2.5rem; /* Increased padding */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav .logo {
-    font-size: 1.8rem; /* Larger font size */
+    font-size: 1.8rem;
     font-weight: bold;
     color: var(--primary);
 }
@@ -36,16 +47,21 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.2rem; /* Increased gap */
+    gap: 1rem;
     margin: 0;
     padding: 0;
+}
+
+nav ul li {
+    list-style: none;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--text);
-    padding: 0.6rem 1.2rem; /* Increased padding */
-    border-radius: 4px;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--primary);
+    border-radius: 6px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -58,25 +74,25 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 6rem 2.5rem; /* Increased padding */
+    padding: 6rem 2rem;
 }
 
 .hero h1 {
-    font-size: 3.5rem; /* Larger font size */
+    font-size: 3.5rem;
     color: var(--primary);
-    margin-bottom: 1.2rem; /* Increased margin */
+    margin-bottom: 1.2rem;
 }
 
 .hero p {
-    font-size: 1.4rem; /* Larger font size */
-    margin-bottom: 2.5rem; /* Increased margin */
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
 }
 
 .hero .socials a {
     color: var(--text);
-    margin: 0 1.2rem; /* Increased margin */
-    text-decoration: none;
+    margin: 0 1rem;
     font-weight: bold;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
@@ -84,250 +100,119 @@ nav ul li a.active {
     color: var(--primary);
 }
 
-/* Content Containers */
-.content-container {
-    max-width: 900px; /* Increased max width */
-    margin: 2.5rem auto; /* Increased margin */
-    padding: 2.5rem; /* Increased padding */
+/* Containers */
+.content-container,
+main,
+.about-me {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
     background-color: var(--card);
-    border-radius: 10px; /* Increased border radius */
-    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
-}
-
-.content-container h2 {
-    font-size: 2.5rem; /* Larger font size */
-    margin-bottom: 1.2rem; /* Increased margin */
-    color: var(--primary);
-    text-align: center;
-}
-
-.content-container p {
-    margin-bottom: 1.2rem; /* Increased margin */
-    text-align: center;
-    font-size: 1.2rem; /* Larger font size */
-}
-
-.content-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.content-container ul li {
-    margin: 0.6rem 0; /* Increased margin */
-}
-
-.content-container ul li a {
-    text-decoration: none;
-    color: var(--primary);
-    font-size: 1.1rem; /* Larger font size */
-    transition: color 0.3s;
-}
-
-.content-container ul li a:hover {
-    color: var(--text);
-}
-
-/* Social Links Page */
-main {
-    max-width: 900px; /* Increased max width */
-    margin: 2.5rem auto; /* Increased margin */
-    padding: 2.5rem; /* Increased padding */
-    background-color: var(--card);
-    border-radius: 10px; /* Increased border radius */
+    border-radius: 10px;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-main h1 {
-    font-size: 2.5rem; /* Larger font size */
+.content-container h2,
+main h1,
+.about-me h1 {
+    font-size: 2.5rem;
     color: var(--primary);
-    margin-bottom: 1.2rem; /* Increased margin */
+    margin-bottom: 1.2rem;
 }
 
+.content-container p,
+.about-me p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.content-container ul,
 main ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+.content-container ul li,
 main ul li {
-    margin: 0.6rem 0; /* Increased margin */
+    margin: 0.6rem 0;
 }
 
+.content-container ul li a,
 main ul li a {
     text-decoration: none;
     color: var(--primary);
-    font-weight: bold;
-    font-size: 1.1rem; /* Larger font size */
+    font-size: 1.1rem;
     transition: color 0.3s;
 }
 
+.content-container ul li a:hover,
 main ul li a:hover {
     color: var(--text);
 }
 
-/* About Me Page Styling */
-.about-me {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #1f1f1f;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.about-me h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #f0f0f0;
-}
-
-.about-me p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
-  margin-bottom: 1rem;
-}
-
+/* About Me Specific */
 .about-me strong {
-  color: #90cdf4;
+    color: #90cdf4;
 }
 
-/* Base Body Styling */
-body {
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: system-ui, sans-serif;
-  color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-  cursor: url('NormalCursor.png') 16 16, auto;
-}
-
-/* Hover Cursor */
-a:hover,
-button:hover,
-nav ul li a:hover {
-  cursor: url('selectCursor.png') 16 16, auto;
-}
-
-/* Navbar */
-nav {
-  background-color: #1f1f1f;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-nav .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #bb86fc;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  background-color: transparent;
-  border: 2px solid #bb86fc;
-  color: #bb86fc;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #bb86fc;
-  color: #121212;
-}
-
-/* Optional Layout Toggle Button (as nav item) */
-nav ul li.layout-toggle {
-  margin-left: auto;
-}
-
-
-/* Base Dark Mode */
-body {
-  background-color: #121212;
-  color: #f0f0f0;
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-a {
-  color: #90cdf4; /* Purple Accent */
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: #bb86fc; /* Slightly lighter purple on hover */
-}
-
-nav {
-  background-color: #1f1f1f;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-nav .logo {
-  color: #f0f0f0;
-  font-size: 1.8rem;
-  margin-right: auto;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-nav li {
-  list-style: none;
-}
-
-nav a {
-  color: #f0f0f0;
-  text-decoration: none;
-  padding: 0.8rem 1.2rem;
-  font-size: 1.2rem;
-}
-
-nav .active {
-  color: #bb86fc;
-  font-weight: bold;
-}
-
-/* Button Styles */
+/* Button Styling */
 button {
-  background-color: #90cdf4;
-  color: #121212;
-  padding: 0.5rem 1rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+    background-color: #90cdf4;
+    color: #121212;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #bb86fc;
+    background-color: #bb86fc;
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .content-container,
+    main,
+    .about-me {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .content-container h2,
+    main h1,
+    .about-me h1 {
+        font-size: 2rem;
+    }
 }
