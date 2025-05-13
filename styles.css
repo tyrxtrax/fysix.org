@@ -292,3 +292,43 @@ button {
 button:hover {
   background-color: #bb86fc;
 }
+
+
+/* GitHub and Discord Buttons Styling */
+.social-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid #90cdf4; /* Border color */
+  border-radius: 6px;
+  color: #90cdf4; /* Text color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #90cdf4;
+  color: #121212;
+}
+
+.social-links a.github {
+  border-color: #333;
+  color: #333;
+}
+
+.social-links a.github:hover {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.social-links a.discord {
+  border-color: #7289da; /* Discord blue */
+  color: #7289da;
+}
+
+.social-links a.discord:hover {
+  background-color: #7289da;
+  color: #f0f0f0;
+}
