@@ -23,8 +23,6 @@ body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.8;
     font-size: 1.1rem;
-    cursor: url('NormalCursor.png') 16 16, auto;
-}
 
 body::before {
     content: "";
@@ -38,12 +36,7 @@ body::before {
 }
 
 
-/* Hover Cursor */
-a:hover,
-button:hover,
-nav ul li a:hover {
-    cursor: url('SelectCursor.png') 16 16, auto;
-}
+
 
 /* Navigation Bar */
 nav {
