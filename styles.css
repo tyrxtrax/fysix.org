@@ -15,14 +15,28 @@
 }
 
 /* Base Body Styling */
+/* Base Body Styling */
 body {
-    background-color: var(--bg);
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: var(--text);
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.8;
     font-size: 1.1rem;
     cursor: url('NormalCursor.png') 16 16, auto;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.85); /* Adjustable darkness */
+    z-index: -1;
+}
+
 
 /* Hover Cursor */
 a:hover,
