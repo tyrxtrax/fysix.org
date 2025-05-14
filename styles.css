@@ -17,7 +17,7 @@
 /* Base Body Styling */
 /* Base Body Styling */
 body {
-    background: url('background.jpg') no-repeat center center fixed;
+    background: color: #333333;
     background-size: cover;
     color: var(--text);
     font-family: 'Segoe UI', system-ui, sans-serif;
