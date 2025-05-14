@@ -17,12 +17,13 @@
 /* Base Body Styling */
 /* Base Body Styling */
 body {
-    background: color: #333333;
+    background-color: #333333;
     background-size: cover;
     color: var(--text);
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.8;
     font-size: 1.1rem;
+}
 
 body::before {
     content: "";
@@ -34,6 +35,7 @@ body::before {
     background-color: rgba(15, 15, 15, 0.85); /* Adjustable darkness */
     z-index: -1;
 }
+
 
 
 
